@@ -11,6 +11,80 @@
 <meta name="author" content="YOUR NAME">
 <title>The Emperor's New Groove</title>
 <link rel="stylesheet" href="styles.css">
+
+<style>
+    body {
+        margin: 0;
+        text-align: center;
+        background: #fff8ec;
+        color: #2b1a10;
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 1.6;
+    }
+
+    h1, h2 {
+        color: #2b1a10;
+        text-align: center;
+    }
+
+    /* no bullets, everything centered */
+    ul, li {
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background: #c8501e;
+    }
+
+    nav img {
+        height: 48px;
+        width: auto;
+        display: block;
+    }
+
+    /* poster at 1/8 size, centered */
+    .hero img {
+        display: block;
+        margin: 1rem auto;
+        width: 133px;
+        height: auto;
+    }
+
+    p {
+        max-width: 800px;
+        margin: 1rem auto;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .gallery img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+</style>
 </head>
 <body>
 
@@ -28,10 +102,10 @@
 <h1>Emperor's New Groove</h1>
 <p>Directed by Mark Dindal, Emperor's New Groove is able to captivate me in a way few movies could and it's almost purely because of the film's dialogue.</p>
 
-<ul class="gallery" style="list-style: none; margin: 0; padding: 0;">
-    <li style="list-style: none;"><h2>Artwork</h2></li>
-    <li style="list-style: none;"><a href="Art%20of%20ENG%20M2.webp"><img src="Art%20of%20ENG%20M2.webp" width="400" alt="Yzma concept sketches"></a></li>
-    <li style="list-style: none;"><a href="Art%20of%20ENG.webp"><img src="Art%20of%20ENG.webp" width="400" alt="Kronk model sheet"></a></li>
+<ul class="gallery">
+    <li><h2>Artwork</h2></li>
+    <li><a href="Art%20of%20ENG%20M2.webp"><img src="Art%20of%20ENG%20M2.webp" width="400" alt="Yzma concept sketches"></a></li>
+    <li><a href="Art%20of%20ENG.webp"><img src="Art%20of%20ENG.webp" width="400" alt="Kronk model sheet"></a></li>
 </ul>
 
 <p>Write about it here.</p>
@@ -40,115 +114,3 @@
 
 </body>
 </html>
-
-styles.css
-
-css
-body {
-    margin: 0;
-    text-align: center;
-    font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.6;
-    color: #2b1a10;
-    background: #fff8ec;
-}
-
-/* Remove all bullets from every list */
-ul, ol, li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: #c8501e;
-}
-
-nav img {
-    height: 48px;
-    width: auto;
-    display: block;
-}
-
-/* Poster: 1/8 size, centered under the menu */
-.hero {
-    padding: 1rem 0;
-}
-
-.hero img {
-    display: block;
-    margin: 0 auto;
-    width: 133px;
-    max-width: 100%;
-    height: auto;
-}
-
-p {
-    max-width: 800px;
-    margin: 1rem auto;
-    padding: 0 1rem;
-}
-
-.gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.gallery img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-}
-
-footer {
-    padding: 1.5rem 1rem;
-    font-size: 0.9rem;
-}
-Poster size: if 133px is too small or too big, change the width in .hero img.
-Bullets: if some still show, your browser may be loading an old styles.css. Hard refresh with Ctrl+Shift+R, and make sure the updated file was committed to GitHub.
-Other image: if you meant the first artwork image (the Yzma sketches) instead of the poster, tell me and I’ll resize that one.
-
-how do I make an image center
-
-There are three common ways, depending on the situation.
-
-1. Image on its own (most common)
-
-Images are inline by default, so make the image a block and use auto margins:
-
-css
-img {
-    display: block;
-    margin: 0 auto;
-}
-
-That’s what .hero img does in your current CSS.
-
-2. Center it with its text
-
-If the image sits in a container, center everything inside that container:
-
-css
-.hero {
-    text-align: center;
-}
-
-This works because an image behaves like a big letter. Your body already has text-align: center, so most of your page does this automatically.
-
-3. Center with flexbox
-
-Good for a row of images or a menu:
-
-css
-.gallery {
-    display: flex;
-    justify-content: center;   /* horizontal */
-    align-items: center;       /* vertical */
-}
