@@ -27,7 +27,6 @@
         text-align: center;
     }
 
-    /* no bullets, everything centered */
     ul, li {
         list-style: none !important;
         margin: 0 !important;
@@ -50,12 +49,19 @@
         display: block;
     }
 
-    /* poster at 1/8 size, centered */
-    .hero img {
+    /* poster and artwork share the same height */
+    .hero img,
+    .gallery img {
         display: block;
-        margin: 1rem auto;
-        width: 133px;
-        height: auto;
+        margin: 0 auto;
+        height: 250px;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .hero img {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     p {
@@ -70,13 +76,6 @@
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-    }
-
-    .gallery img {
-        display: block;
-        margin: 0 auto;
-        max-width: 100%;
-        height: auto;
     }
 
     footer {
@@ -104,13 +103,16 @@
 
 <ul class="gallery">
     <li><h2>Artwork</h2></li>
-    <li><a href="Art%20of%20ENG%20M2.webp"><img src="Art%20of%20ENG%20M2.webp" width="400" alt="Yzma concept sketches"></a></li>
-    <li><a href="Art%20of%20ENG.webp"><img src="Art%20of%20ENG.webp" width="400" alt="Kronk model sheet"></a></li>
+    <li><a href="Art%20of%20ENG%20M2.webp"><img src="Art%20of%20ENG%20M2.webp" alt="Yzma concept sketches"></a></li>
+    <li><a href="Art%20of%20ENG.webp"><img src="Art%20of%20ENG.webp" alt="Kronk model sheet"></a></li>
 </ul>
 
-<p>Write about it here.</p>
+  <p>Nothing can compare to the love I have for this film</p>
+<p>DIALOGUE: 9.5/10</p>
+<p>VISUALS: 6/10</p>
+<p>ILLUSION: 9/10</p>
 
-<footer>Built by YOUR NAME &middot; BMIS 235</footer>
+<footer>Built by LINCOLN JENT &middot; BMIS 235</footer>
 
 </body>
 </html>
